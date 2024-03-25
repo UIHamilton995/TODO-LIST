@@ -2,16 +2,15 @@
 This is an interactive task manager. Your Personal Assistant for Time Management.
 
 # Description:
-This repository contains a simple and intuitive ToDo list application built using React.js and TypeScript. The app allows users to create, edit, and delete tasks, mark tasks as completed, and organize tasks by categories or priority levels. It also includes features such as drag-and-drop functionality for task reordering and a responsive user interface for seamless use on various devices.
+This repository contains a simple and intuitive ToDo list application built using React.js and TypeScript. The app allows users to create, edit, and delete tasks, mark tasks as completed, and a responsive user interface for seamless use on various devices.
 
 # Key Features:
 
 Create, edit, and delete tasks
 Mark tasks as completed
-Organize tasks by categories or priority levels
-Drag-and-drop functionality for task reordering
 Responsive user interface for mobile and desktop devices
-Technologies Used:
+
+# Technologies Used:
 
 React.js
 TypeScript
@@ -25,7 +24,7 @@ To run the app locally, clone the repository and install the necessary dependenc
 Contributions to enhance features, fix bugs, or improve the codebase are welcome. Please follow the contribution guidelines and submit pull requests to contribute to the project.
 
 # Demo:
-Link to Live Demo (if available)
+Link to Live Demo ( https://todo-list-ashen-sigma.vercel.app/ )
 
 # Screenshot:
  (non yet please)
