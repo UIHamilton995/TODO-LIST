@@ -24,7 +24,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, closeModal }) => {
         <p className="bg-gray-200 rounded-lg h-20 overflow-hidden overflow-ellipsis">{todo}</p>
         <div className="mt-4 flex flex-col justify-between gap-1">
           <CompleteTodoButton onClick={() => {}} />
-          <EditTodoButton onClick={() => {}} />
+          <EditTodoButton onSave={() => {}} />
           <DeleteTodoButton onClick={() => {}} />
         </div>
       </div>

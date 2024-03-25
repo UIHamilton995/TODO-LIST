@@ -23,7 +23,7 @@ const EditTodoButton: React.FC<EditButtonProps> = ({ onSave }) => {
         <MdEdit />
         Edit
       </button>
-      {showEditForm && <EditTodoForm onSave={onSave} onClose={handleCloseForm} />} {/* Render the EditTodoForm when showEditForm is true */}
+      {showEditForm && <EditTodoForm onSave={onSave} onClose={handleCloseForm} todo={''} />} {/* Render the EditTodoForm when showEditForm is true */}
     </>
   );
 };
