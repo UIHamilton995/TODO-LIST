@@ -21,7 +21,7 @@ const EditTodoButton: React.FC<EditButtonProps> = ({ onSave }) => {
     <>
       <button onClick={handleEditClick} className="bg-blue-500 text-white px-2 py-1 hover:bg-blue-700 rounded-xl flex flex-row items-center justify-center">
         <MdEdit />
-        Edit
+        <span className='ml-2'>Edit</span> 
       </button>
       {showEditForm && <EditTodoForm onSave={onSave} onClose={handleCloseForm} todo={''} />} {/* Render the EditTodoForm when showEditForm is true */}
     </>
