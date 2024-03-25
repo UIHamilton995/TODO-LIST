@@ -1,17 +1,30 @@
-// components/EditButton.tsx
-import React from 'react';
-import { IoMdCloseCircle } from 'react-icons/io';
+import React, { useState } from 'react';
+import { MdEdit } from 'react-icons/md';
+import EditTodoForm from '../compositions/EditTodoForm'; // Import the EditTodoForm component
 
 interface EditButtonProps {
-  onClick: () => void;
+  onSave: (editedTodo: string) => void; // Pass onSave prop to EditTodoForm
 }
 
-const EditTodoButton: React.FC<EditButtonProps> = ({ onClick }) => {
+const EditTodoButton: React.FC<EditButtonProps> = ({ onSave }) => {
+  const [showEditForm, setShowEditForm] = useState<boolean>(false); // State to control form visibility
+
+  const handleEditClick = () => {
+    setShowEditForm(true); // Show the edit form when the button is clicked
+  };
+
+  const handleCloseForm = () => {
+    setShowEditForm(false); // Close the edit form
+  };
+
   return (
-    <button onClick={onClick} className="bg-blue-500 text-white px-2 py-1 mt-4 hover:bg-blue-700 rounded-xl">
-    <IoMdCloseCircle />
-      Edit
-    </button>
+    <>
+      <button onClick={handleEditClick} className="bg-blue-500 text-white px-2 py-1 hover:bg-blue-700 rounded-xl flex flex-row items-center justify-center">
+        <MdEdit />
+        Edit
+      </button>
+      {showEditForm && <EditTodoForm onSave={onSave} onClose={handleCloseForm} />} {/* Render the EditTodoForm when showEditForm is true */}
+    </>
   );
 };
 

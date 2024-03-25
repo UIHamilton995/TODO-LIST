@@ -1,5 +1,5 @@
 // Component for editing an existing todo item 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface EditTodoFormProps {
   todo: string;
@@ -8,11 +8,17 @@ interface EditTodoFormProps {
 }
 
 const EditTodoForm: React.FC<EditTodoFormProps> = ({ todo, onSave, onClose }) => {
-  const [editedTodo, setEditedTodo] = useState<string>(todo);
+  const [editedTodo, setEditedTodo] = useState<string>('');
+
+  useEffect(() => {
+    setEditedTodo(todo);
+  }, [todo]);
 
   const handleSave = () => {
-    onSave(editedTodo);
-    onClose();
+    if (editedTodo.trim() !== '') {
+      onSave(editedTodo);
+      onClose();
+    }
   };
 
   return (
